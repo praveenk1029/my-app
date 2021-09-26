@@ -24,4 +24,9 @@ public class HelloController {
                       new Employee(3, "Nicole", 19, "Munich"));
         return employees;
     }
+
+    @GetMapping("/getCountries")
+    public List<String> getCountries(){
+        return Arrays.asList("India","US","UK", "Germany", "Netherlands", "Norway", "Poland");
+    }
 }
