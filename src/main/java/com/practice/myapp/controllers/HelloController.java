@@ -27,6 +27,6 @@ public class HelloController {
 
     @GetMapping("/getCountries")
     public List<String> getCountries(){
-        return Arrays.asList("India","US","UK", "Germany", "Netherlands", "Norway", "Poland");
+        return Arrays.asList("India","US","UK", "Germany", "Netherlands", "Norway", "Poland", "UAE");
     }
 }
