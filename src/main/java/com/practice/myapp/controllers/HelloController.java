@@ -4,9 +4,8 @@ import com.practice.myapp.model.Employee;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 public class HelloController {
@@ -28,5 +27,15 @@ public class HelloController {
     @GetMapping("/getCountries")
     public List<String> getCountries(){
         return Arrays.asList("India","US","UK", "Germany", "Netherlands", "Norway", "Poland", "UAE");
+    }
+
+    @GetMapping("/getCountriesSorted")
+    public List<String> getCountriesSorted(){
+
+        List<String> list = Arrays.asList("India","US","UK", "Germany", "Netherlands", "Norway", "Poland", "UAE")
+                .stream()
+                .collect(Collectors.toList());
+        list.sort(Comparator.naturalOrder());
+        return list;
     }
 }
