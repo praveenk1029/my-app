@@ -3,7 +3,6 @@ package com.practice.myapp.controllers;
 import com.practice.myapp.model.Employee;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -31,7 +30,6 @@ public class HelloController {
 
     @GetMapping("/getCountriesSorted")
     public List<String> getCountriesSorted(){
-
         List<String> list = Arrays.asList("India","US","UK", "Germany", "Netherlands", "Norway", "Poland", "UAE")
                 .stream()
                 .collect(Collectors.toList());
